@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Aluno - ICOL</title>
+  <script src="../assets/js/theme.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            bordo: "#8B0006",
+            laranja: "#F16C1F",
+            vermelho: "#EE1A24",
+            rosa: "#F7353F",
+          },
+          fontFamily: {
+            rounded: ['"Arial Rounded MT Bold"', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-[#f7f7f8] text-[#2a0507] antialiased transition-colors duration-300 dark:bg-[#120002] dark:text-white">
+  <div class="min-h-screen md:flex">
+    <aside class="bg-bordo px-5 py-6 text-white md:fixed md:inset-y-0 md:left-0 md:w-72">
+      <div class="flex h-full flex-col">
+        <a href="../tela_inicial.html" class="flex items-center gap-3">
+          <img src="../../icol/icol-imagens/icol-colorida.png" alt="Logo ICOL" class="h-11 w-auto rounded-full bg-white/95 px-2 py-1" />
+        </a>
+
+        <nav class="mt-10 flex flex-1 flex-col gap-2 text-sm font-semibold text-white/75" aria-label="Menu do aluno">
+          <a href="dashboard_aluno.html" class="rounded-full bg-white/15 px-5 py-3 text-white">Início</a>
+          <a href="dashboard_aluno_notas.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Minhas Notas</a>
+          <a href="dashboard_aluno_frequencia.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Frequência</a>
+          <a href="dashboard_aluno_calendario.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Calendário</a>
+        </nav>
+
+        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo">
+          Sair
+        </a>
+      </div>
+    </aside>
+
+    <main class="flex-1 px-4 py-8 md:ml-72 md:px-10 md:py-12">
+      <div class="mx-auto max-w-6xl">
+        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5">
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-laranja">Área do Aluno</span>
+          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo md:text-5xl">
+            Olá, Aluno! Bem-vindo de volta.
+          </h1>
+          <p class="mt-4 max-w-3xl text-sm leading-6 text-bordo/60 md:text-base">
+            Acompanhe seu desempenho, presença, aulas e avisos em um só lugar.
+          </p>
+        </header>
+
+        <section class="mt-8 grid gap-5 md:grid-cols-3">
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
+            <p class="text-sm font-bold text-bordo/55">Média Geral</p>
+            <p class="mt-4 font-rounded text-5xl text-bordo">8.5</p>
+            <p class="mt-3 text-sm text-bordo/50">Informática Básica</p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
+            <p class="text-sm font-bold text-bordo/55">Frequência</p>
+            <p class="mt-4 font-rounded text-5xl text-laranja">92%</p>
+            <p class="mt-3 text-sm text-bordo/50">2 faltas registradas</p>
+          </article>
+
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
+            <p class="text-sm font-bold text-bordo/55">Próxima Aula</p>
+            <p class="mt-4 font-rounded text-3xl text-vermelho">Informática</p>
+            <p class="mt-3 text-sm text-bordo/60">Hoje, 19h - Laboratório 2</p>
+          </article>
+        </section>
+
+        <section class="mt-8 grid gap-5 lg:grid-cols-[1.2fr_0.8fr]">
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+              <div>
+                <h2 class="font-rounded text-2xl text-bordo">Resumo da semana</h2>
+                <p class="mt-2 text-sm text-bordo/55">Dados baseados na proposta do sistema ICOL: notas, faltas e situação atual.</p>
+              </div>
+              <a href="dashboard_aluno_calendario.html" class="rounded-full bg-laranja px-5 py-3 text-sm font-bold text-white transition hover:bg-vermelho">Ver agenda</a>
+            </div>
+
+            <div class="mt-7 space-y-4">
+              <div class="rounded-2xl bg-[#fff8f5] p-5">
+                <p class="text-sm font-bold text-bordo">Atividade pendente</p>
+                <p class="mt-2 text-sm leading-6 text-bordo/65">Enviar exercício de planilhas até sexta-feira.</p>
+              </div>
+              <div class="rounded-2xl bg-[#fff8f5] p-5">
+                <p class="text-sm font-bold text-bordo">Aviso da turma</p>
+                <p class="mt-2 text-sm leading-6 text-bordo/65">A próxima aula terá revisão de digitação, editores de texto e organização de arquivos.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="rounded-3xl bg-bordo p-7 text-white shadow-xl shadow-bordo/10">
+            <h2 class="font-rounded text-2xl">Plano de estudo sugerido</h2>
+            <p class="mt-4 text-sm leading-6 text-white/70">O assistente IA pode sugerir uma rotina de estudos com base nos horários livres do aluno.</p>
+            <div class="mt-6 space-y-3 text-sm">
+              <p class="rounded-2xl bg-white/10 p-4">Segunda: 30 min de revisão de teclado</p>
+              <p class="rounded-2xl bg-white/10 p-4">Quarta: 40 min de editor de texto</p>
+              <p class="rounded-2xl bg-white/10 p-4">Sábado: prática livre de planilhas</p>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <button id="ai-toggle" type="button" class="fixed bottom-5 right-5 z-50 inline-flex h-16 w-16 items-center justify-center rounded-full bg-bordo text-sm font-black text-white shadow-2xl shadow-bordo/30 transition hover:-translate-y-1 hover:bg-laranja" aria-label="Abrir assistente de IA">
+    IA
+  </button>
+
+  <section id="ai-panel" class="fixed bottom-24 right-5 z-50 hidden w-[min(22rem,calc(100vw-2.5rem))] rounded-3xl bg-white p-5 shadow-2xl shadow-bordo/20">
+    <h2 class="font-rounded text-xl text-bordo">Assistente ICOL</h2>
+    <p class="mt-2 text-sm leading-6 text-bordo/60">Tire dúvidas sobre a plataforma ou peça uma rotina de estudos personalizada.</p>
+    <div class="mt-4 rounded-2xl bg-[#fff8f5] p-4 text-sm leading-6 text-bordo/70">
+      Exemplo: "Tenho 2 horas livres no sábado. Como posso revisar informática?"
+    </div>
+  </section>
+
+  <script>
+    const aiToggle = document.querySelector("#ai-toggle");
+    const aiPanel = document.querySelector("#ai-panel");
+    aiToggle?.addEventListener("click", () => aiPanel.classList.toggle("hidden"));
+  </script>
+</body>
+</html>
+
+
+

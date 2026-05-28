@@ -1,0 +1,52 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LanÃ§ar Notas - ICOL</title>
+  <script src="../assets/js/theme.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { colors: { bordo: "#8B0006", laranja: "#F16C1F", vermelho: "#EE1A24", rosa: "#F7353F" }, fontFamily: { rounded: ['"Arial Rounded MT Bold"', 'Arial', 'sans-serif'] } } } };
+  </script>
+</head>
+<body class="bg-gray-50 text-[#2a0507] antialiased transition-colors duration-300 dark:bg-[#120002] dark:text-white">
+  <div class="min-h-screen md:flex">
+    <aside class="bg-bordo px-5 py-6 text-white md:fixed md:inset-y-0 md:left-0 md:w-72">
+      <div class="flex h-full flex-col">
+        <a href="../tela_inicial.html"><img src="../../icol/icol-imagens/icol-colorida.png" alt="Logo ICOL" class="h-11 w-auto rounded-full bg-white/95 px-2 py-1" /></a>
+        <nav class="mt-10 flex flex-1 flex-col gap-2 text-sm font-semibold text-white/75" aria-label="Menu do professor">
+          <a href="dashboard_professor.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">InÃ­cio</a>
+          <a href="dashboard_professor_turmas.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Minhas Turmas</a>
+          <a href="dashboard_professor_notas.html" class="rounded-full bg-white/15 px-5 py-3 text-white">LanÃ§ar Notas</a>
+          <a href="dashboard_professor_diario.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">DiÃ¡rio de Classe</a>
+        </nav>
+        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo">Sair</a>
+      </div>
+    </aside>
+    <main class="flex-1 px-4 py-8 md:ml-72 md:px-10 md:py-12">
+      <div class="mx-auto max-w-6xl">
+        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5">
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-laranja">AvaliaÃ§Ãµes</span>
+          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo md:text-5xl">LanÃ§ar Notas</h1>
+        </header>
+        <section class="mt-8 rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
+          <div class="grid gap-4 md:grid-cols-3">
+            <label class="text-sm font-bold text-bordo">Turma<input class="mt-2 w-full rounded-full border border-bordo/10 bg-[#fff8f5] px-5 py-4 outline-none focus:border-laranja" value="InformÃ¡tica BÃ¡sica - A" /></label>
+            <label class="text-sm font-bold text-bordo">AvaliaÃ§Ã£o<input class="mt-2 w-full rounded-full border border-bordo/10 bg-[#fff8f5] px-5 py-4 outline-none focus:border-laranja" value="Prova 1" /></label>
+            <label class="text-sm font-bold text-bordo">Data<input class="mt-2 w-full rounded-full border border-bordo/10 bg-[#fff8f5] px-5 py-4 outline-none focus:border-laranja" value="28/05/2026" /></label>
+          </div>
+          <div class="mt-6 overflow-hidden rounded-2xl border border-bordo/10">
+            <table class="w-full min-w-[620px] text-left text-sm"><thead class="bg-[#fff8f5] text-bordo"><tr><th class="px-5 py-4">Aluno</th><th class="px-5 py-4">Nota</th><th class="px-5 py-4">ObservaÃ§Ã£o</th></tr></thead><tbody class="divide-y divide-bordo/10 text-bordo/70"><tr><td class="px-5 py-4 font-bold text-bordo">Mariana S.</td><td class="px-5 py-4">8.5</td><td class="px-5 py-4">Boa evoluÃ§Ã£o</td></tr><tr><td class="px-5 py-4 font-bold text-bordo">Carlos A.</td><td class="px-5 py-4">7.8</td><td class="px-5 py-4">Revisar planilhas</td></tr><tr><td class="px-5 py-4 font-bold text-bordo">Helena M.</td><td class="px-5 py-4">9.2</td><td class="px-5 py-4">Excelente prÃ¡tica</td></tr></tbody></table>
+          </div>
+          <button class="mt-6 rounded-full bg-bordo px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white transition hover:bg-laranja">Salvar notas</button>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
+

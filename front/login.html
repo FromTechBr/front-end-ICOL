@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal ICOL</title>
+  <script src="assets/js/theme.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            bordo: "#8B0006",
+            laranja: "#F16C1F",
+            vermelho: "#EE1A24",
+            rosa: "#F7353F",
+          },
+          fontFamily: {
+            rounded: ['"Arial Rounded MT Bold"', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-[#fff8f5] text-[#2a0507] antialiased transition-colors duration-300 dark:bg-[#120002] dark:text-white">
+  <main class="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-12">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(241,108,31,0.14),transparent_28%),radial-gradient(circle_at_80%_30%,rgba(238,26,36,0.10),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(247,53,63,0.10),transparent_32%)]"></div>
+
+    <div class="absolute left-[8%] top-[14%] -z-10 h-28 w-52 -rotate-12 rounded-full border-[16px] border-laranja/20"></div>
+    <div class="absolute bottom-[12%] right-[8%] -z-10 h-32 w-56 rotate-12 rounded-full border-[18px] border-rosa/20"></div>
+
+    <section class="w-full max-w-md rounded-3xl bg-white p-8 shadow-2xl shadow-bordo/10 md:p-10">
+      <div class="text-center">
+        <img
+          src="../icol/icol-imagens/icol-colorida.png"
+          alt="Logo ICOL"
+          class="mx-auto h-16 w-auto"
+        />
+
+        <h1 class="mt-8 font-rounded text-3xl text-bordo md:text-4xl">
+          Bem-vindo de volta!
+        </h1>
+
+        <p class="mt-3 text-sm leading-6 text-bordo/60">
+          Acesse suas notas, faltas e cronogramas
+        </p>
+      </div>
+
+      <form id="login-form" class="mt-8 space-y-5">
+        <fieldset>
+          <legend class="mb-3 block text-sm font-bold text-bordo">
+            Perfil de acesso
+          </legend>
+
+          <div class="grid grid-cols-2 gap-2 rounded-[1.6rem] bg-[#fff8f5] p-1 sm:grid-cols-4">
+            <label class="cursor-pointer">
+              <input class="peer sr-only" type="radio" name="perfil" value="aluno" checked />
+              <span class="flex h-11 items-center justify-center rounded-full text-xs font-bold text-bordo/65 transition peer-checked:bg-laranja peer-checked:text-white peer-checked:shadow-lg peer-checked:shadow-laranja/20">
+                Aluno
+              </span>
+            </label>
+
+            <label class="cursor-pointer">
+              <input class="peer sr-only" type="radio" name="perfil" value="responsavel" />
+              <span class="flex h-11 items-center justify-center rounded-full text-xs font-bold text-bordo/65 transition peer-checked:bg-laranja peer-checked:text-white peer-checked:shadow-lg peer-checked:shadow-laranja/20">
+                Responsável
+              </span>
+            </label>
+
+            <label class="cursor-pointer">
+              <input class="peer sr-only" type="radio" name="perfil" value="professor" />
+              <span class="flex h-11 items-center justify-center rounded-full text-xs font-bold text-bordo/65 transition peer-checked:bg-laranja peer-checked:text-white peer-checked:shadow-lg peer-checked:shadow-laranja/20">
+                Professor
+              </span>
+            </label>
+
+            <label class="cursor-pointer">
+              <input class="peer sr-only" type="radio" name="perfil" value="coordenador" />
+              <span class="flex h-11 items-center justify-center rounded-full text-xs font-bold text-bordo/65 transition peer-checked:bg-laranja peer-checked:text-white peer-checked:shadow-lg peer-checked:shadow-laranja/20">
+                Coordenador
+              </span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div>
+          <label for="login-email" class="mb-2 block text-sm font-bold text-bordo">
+            E-mail ou RA
+          </label>
+          <input
+            id="login-email"
+            type="text"
+            placeholder="Digite seu e-mail ou RA"
+            class="w-full rounded-full border border-bordo/10 bg-[#fff8f5] px-5 py-4 text-sm text-bordo outline-none transition placeholder:text-bordo/35 focus:border-laranja focus:bg-white focus:ring-4 focus:ring-laranja/15"
+          />
+        </div>
+
+        <div>
+          <div class="mb-2 flex items-center justify-between gap-4">
+            <label for="login-password" class="block text-sm font-bold text-bordo">
+              Senha
+            </label>
+            <a href="#recuperar-senha" class="text-xs font-bold text-laranja transition hover:text-vermelho">
+              Esqueceu a senha?
+            </a>
+          </div>
+
+          <input
+            id="login-password"
+            type="password"
+            placeholder="Digite sua senha"
+            class="w-full rounded-full border border-bordo/10 bg-[#fff8f5] px-5 py-4 text-sm text-bordo outline-none transition placeholder:text-bordo/35 focus:border-laranja focus:bg-white focus:ring-4 focus:ring-laranja/15"
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full rounded-full bg-bordo px-6 py-4 text-sm font-bold uppercase tracking-[0.14em] text-white shadow-xl shadow-bordo/20 transition hover:-translate-y-0.5 hover:bg-[#700005]"
+        >
+          Entrar
+        </button>
+      </form>
+
+      <div class="mt-7 text-center">
+        <a href="tela_inicial.html" class="text-sm font-bold text-bordo/55 transition hover:text-laranja">
+          Voltar para o Início
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const loginForm = document.querySelector("#login-form");
+
+    loginForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const selectedRole = document.querySelector('input[name="perfil"]:checked')?.value;
+      const destinations = {
+        aluno: "aluno/dashboard_aluno.html",
+        responsavel: "responsavel/dashboard_responsavel.html",
+        professor: "professor/dashboard_professor.html",
+        coordenador: "coordenador/dashboard_coordenador.html",
+      };
+
+      window.location.href = destinations[selectedRole] || destinations.aluno;
+    });
+  </script>
+</body>
+</html>
+
+
+

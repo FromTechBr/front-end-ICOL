@@ -1,0 +1,445 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICOL - Instituto de Capacitação e Orientação Livre</title>
+  <script src="assets/js/theme.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            bordo: "#8B0006",
+            laranja: "#F16C1F",
+            vermelho: "#EE1A24",
+            rosa: "#F7353F",
+          },
+          fontFamily: {
+            rounded: ['"Arial Rounded MT Bold"', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -20;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(241, 108, 31, var(--scroll-warm, 0.16)), transparent 28%),
+        radial-gradient(circle at 82% 34%, rgba(247, 53, 63, var(--scroll-rose, 0.10)), transparent 30%),
+        linear-gradient(180deg, #fff8f5 0%, #fff3ed 46%, #fffaf7 100%);
+      transition: background 900ms ease, opacity 900ms ease;
+    }
+
+    .dark body::before {
+      background:
+        radial-gradient(circle at 18% 12%, rgba(241, 108, 31, var(--scroll-warm, 0.14)), transparent 30%),
+        radial-gradient(circle at 82% 34%, rgba(247, 53, 63, var(--scroll-rose, 0.12)), transparent 32%),
+        linear-gradient(180deg, #120002 0%, #1b0507 48%, #090001 100%);
+    }
+  </style>
+</head>
+
+<body class="bg-[#fff8f5] text-[#2a0507] antialiased transition-colors duration-1000 ease-out dark:bg-[#120002] dark:text-white">
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[80] focus:rounded-full focus:bg-laranja focus:px-5 focus:py-3 focus:text-sm focus:font-bold focus:text-white">
+    Pular para o conteúdo
+  </a>
+
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 px-4 py-4 transition-all duration-700 ease-out md:px-8">
+    <div id="header-shell" class="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/60 bg-white/80 px-4 py-3 shadow-lg shadow-bordo/5 backdrop-blur-xl transition-all duration-700 ease-out dark:border-white/10 dark:bg-[#1b0507]/80 md:px-5">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="Ir para o início">
+        <img src="assets/images/icol-colorida.png" alt="Logo ICOL" class="h-10 w-auto transition-all duration-300" id="header-logo" />
+      </a>
+
+      <nav class="hidden items-center gap-7 text-sm font-semibold text-bordo/80 dark:text-white/75 lg:flex" aria-label="Navegação principal">
+        <a href="#inicio" class="transition hover:text-laranja">Início</a>
+        <a href="#sobre" class="transition hover:text-laranja">Quem somos</a>
+        <a href="#fundadora" class="transition hover:text-laranja">Fundadora</a>
+        <a href="#cursos" class="transition hover:text-laranja">Cursos</a>
+        <a href="#mural-avisos" class="transition hover:text-laranja">Mural</a>
+        <a href="#depoimentos" class="transition hover:text-laranja">Depoimentos</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <div class="hidden rounded-full bg-[#fff8f5] p-1 dark:bg-white/10 sm:flex" aria-label="Controles de acessibilidade">
+          <button type="button" data-font="decrease" class="rounded-full px-3 py-2 text-xs font-bold text-bordo transition hover:bg-white dark:text-white dark:hover:bg-white/10" aria-label="Diminuir fonte">A-</button>
+          <button type="button" data-font="increase" class="rounded-full px-3 py-2 text-xs font-bold text-bordo transition hover:bg-white dark:text-white dark:hover:bg-white/10" aria-label="Aumentar fonte">A+</button>
+        </div>
+
+        <button type="button" id="theme-toggle" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-bordo/10 bg-white text-bordo shadow-sm transition hover:border-laranja hover:text-laranja dark:border-white/10 dark:bg-white/10 dark:text-white" aria-label="Alternar modo escuro" aria-pressed="false">
+          <span aria-hidden="true" id="theme-icon">☾</span>
+        </button>
+
+        <a href="login.html" class="hidden rounded-full bg-bordo px-5 py-3 text-sm font-bold text-white shadow-lg shadow-bordo/20 transition hover:bg-[#6f0005] md:inline-flex">
+          Área do Aluno
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section id="inicio" class="js-reveal relative overflow-hidden px-4 pb-20 pt-32 opacity-0 translate-y-8 transition duration-700 ease-out md:px-8 md:pb-28 md:pt-40">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(241,108,31,0.18),transparent_28%),radial-gradient(circle_at_85%_30%,rgba(247,53,63,0.16),transparent_30%)]"></div>
+
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div>
+          <span class="inline-flex rounded-full border border-laranja/25 bg-white px-5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-bordo shadow-sm dark:border-laranja/30 dark:bg-white/10 dark:text-white">
+            Curso de Informática Gratuito
+          </span>
+
+          <h1 class="mt-7 max-w-4xl font-rounded text-5xl leading-[0.95] tracking-normal md:text-7xl lg:text-8xl">
+            <span class="bg-gradient-to-r from-bordo via-vermelho to-laranja bg-clip-text text-transparent dark:from-white dark:via-rosa dark:to-laranja">
+              Instituto de Capacitação e Orientação Livre
+            </span>
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-bordo/75 dark:text-white/70">
+            Somos um instituto voltado ao ensino e atuamos presencialmente na cidade de Franca-SP, e temos como intuito transformar a vida de nossos alunos.
+          </p>
+
+          <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+            <a href="#cursos" class="inline-flex items-center justify-center rounded-full bg-bordo px-8 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white shadow-xl shadow-bordo/20 transition hover:-translate-y-0.5 hover:bg-[#700005]">
+              Conhecer Cursos
+            </a>
+
+            <a href="#doacao" class="inline-flex items-center justify-center rounded-full border-2 border-laranja bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.12em] text-bordo transition hover:-translate-y-0.5 hover:bg-laranja hover:text-white dark:bg-transparent dark:text-white">
+              Faça sua doação
+            </a>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -left-8 top-10 h-28 w-52 -rotate-12 rounded-full border-[16px] border-laranja/30"></div>
+          <div class="absolute -right-6 bottom-10 h-32 w-56 rotate-12 rounded-full border-[18px] border-rosa/30"></div>
+
+          <div class="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-white to-[#ffe7de] p-4 shadow-2xl shadow-bordo/15 dark:from-white/10 dark:to-white/5">
+            <div class="overflow-hidden rounded-[2rem] bg-gradient-to-br from-bordo via-vermelho to-laranja p-2">
+              <img src="assets/images/icol-transformando-vidas.png" alt="Alunos do ICOL" class="aspect-[4/3] w-full rounded-[1.6rem] object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mural-avisos" class="js-reveal px-4 pb-10 pt-2 opacity-0 translate-y-8 transition duration-700 ease-out md:px-8 md:pb-16">
+      <div class="mx-auto max-w-7xl">
+        <div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-bordo via-[#270003] to-black p-6 text-white shadow-2xl shadow-bordo/25 md:p-10 lg:p-12">
+          <div class="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full bg-laranja/30 blur-3xl"></div>
+          <div class="pointer-events-none absolute -bottom-28 left-1/3 h-80 w-80 rounded-full bg-rosa/20 blur-3xl"></div>
+          <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,255,255,0.12),transparent_24%),linear-gradient(120deg,rgba(255,255,255,0.08),transparent_34%)]"></div>
+
+          <button type="button" class="absolute left-4 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-2xl font-bold text-white shadow-lg backdrop-blur transition hover:bg-white hover:text-bordo md:inline-flex" aria-label="Aviso anterior">
+            ‹
+          </button>
+
+          <button type="button" class="absolute right-4 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-2xl font-bold text-white shadow-lg backdrop-blur transition hover:bg-white hover:text-bordo md:inline-flex" aria-label="Próximo aviso">
+            ›
+          </button>
+
+          <div class="relative z-10 grid items-center gap-8 md:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+            <div class="max-w-2xl text-center md:text-left">
+              <span class="inline-flex rounded-full bg-laranja px-5 py-2 text-xs font-black uppercase tracking-[0.18em] text-white shadow-lg shadow-laranja/30">
+                Próximo Evento
+              </span>
+
+              <h2 class="mt-6 font-rounded text-4xl leading-[0.95] tracking-normal text-white md:text-6xl lg:text-7xl">
+                Aulão de Informática
+              </h2>
+
+              <p class="mt-5 text-xl font-bold text-laranja md:text-2xl">
+                03/06/2026 • 19h às 21h
+              </p>
+
+              <p class="mt-5 max-w-xl text-base leading-7 text-white/75 md:text-lg">
+                Revisão prática para alunos da ICOL com foco em editores de texto, planilhas e organização de arquivos.
+              </p>
+
+              <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row md:justify-start">
+                <a href="login.html" class="inline-flex w-full items-center justify-center rounded-full bg-laranja px-8 py-4 text-sm font-black uppercase tracking-[0.12em] text-white shadow-xl shadow-laranja/30 transition hover:-translate-y-0.5 hover:bg-vermelho sm:w-auto">
+                  Garantir Vaga
+                </a>
+                <a href="#cursos" class="inline-flex w-full items-center justify-center rounded-full border border-white/25 bg-white/10 px-8 py-4 text-sm font-bold uppercase tracking-[0.12em] text-white backdrop-blur transition hover:bg-white hover:text-bordo sm:w-auto">
+                  Saiba Mais
+                </a>
+              </div>
+            </div>
+
+            <div class="relative mx-auto w-full max-w-md">
+              <div class="absolute -left-6 top-8 h-24 w-24 rounded-full border-[14px] border-laranja/30"></div>
+              <div class="absolute -right-6 bottom-8 h-28 w-28 rounded-full bg-rosa/25 blur-xl"></div>
+
+              <div class="relative rounded-[2rem] border border-white/15 bg-white/10 p-5 shadow-2xl shadow-black/20 backdrop-blur-xl">
+                <div class="rounded-[1.5rem] bg-white p-5 text-bordo shadow-xl dark:bg-white/95">
+                  <div class="flex items-center justify-between gap-4 border-b border-bordo/10 pb-4">
+                    <div>
+                      <p class="text-xs font-black uppercase tracking-[0.18em] text-laranja">Junho</p>
+                      <p class="mt-1 font-rounded text-5xl leading-none text-bordo">03</p>
+                    </div>
+                    <div class="rounded-3xl bg-[#fff1e8] px-4 py-3 text-right">
+                      <p class="text-xs font-bold uppercase tracking-[0.12em] text-bordo/50">Início</p>
+                      <p class="font-rounded text-2xl text-laranja">19h</p>
+                    </div>
+                  </div>
+
+                  <div class="mt-5 grid grid-cols-3 gap-3 text-center text-xs font-bold text-bordo/60">
+                    <span class="rounded-2xl bg-[#fff8f5] px-3 py-4">Word</span>
+                    <span class="rounded-2xl bg-[#fff8f5] px-3 py-4">Excel</span>
+                    <span class="rounded-2xl bg-[#fff8f5] px-3 py-4">Arquivos</span>
+                  </div>
+
+                  <div class="mt-5 rounded-3xl bg-gradient-to-r from-bordo to-vermelho p-4 text-white">
+                    <p class="text-xs font-bold uppercase tracking-[0.16em] text-white/70">Vagas limitadas</p>
+                    <p class="mt-1 font-rounded text-2xl">Inscrições abertas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative z-10 mt-8 flex justify-center gap-2">
+            <span class="h-2.5 w-8 rounded-full bg-laranja"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-white/35"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-white/35"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="js-reveal px-4 py-20 opacity-0 translate-y-8 transition duration-700 ease-out md:px-8">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 rounded-[2.5rem] bg-white p-6 shadow-xl shadow-bordo/5 dark:bg-white/5 dark:shadow-black/20 md:p-10 lg:grid-cols-2">
+        <div class="order-2 lg:order-1">
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-laranja">Nosso instituto</span>
+          <h2 class="mt-4 font-rounded text-4xl leading-tight text-bordo dark:text-white md:text-6xl">A História do Prédio da ICOL</h2>
+          <div class="mt-7 space-y-5 text-base leading-8 text-bordo/75 dark:text-white/70 md:text-lg">
+            <p>O prédio onde hoje funciona a ICOL carrega consigo mais do que paredes e salas: ele guarda memórias, afeto e propósito.</p>
+            <p>Antes de se tornar um espaço dedicado à educação e à transformação social, o local abrigava o consultório do pai da idealizadora Flávia Lancha.</p>
+            <p>Foi ali, entre atendimentos e histórias de vida, que nasceram os valores de cuidado, escuta e acolhimento. Hoje, esse mesmo espaço continua cumprindo uma missão nobre: transformar vidas por meio da educação, da empatia e do compromisso com o próximo.</p>
+          </div>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <div class="relative overflow-hidden rounded-[2.5rem] bg-[#fff3ee] p-3 shadow-2xl shadow-bordo/10 dark:bg-white/10">
+            <img src="assets/images/predio-icol-ilustrado.png" alt="Prédio da ICOL" class="aspect-[4/3] w-full rounded-[2rem] object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fundadora" class="js-reveal relative overflow-hidden px-4 py-20 opacity-0 translate-y-8 transition duration-700 ease-out md:px-8 md:py-28">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_20%,rgba(241,108,31,0.10),transparent_30%),radial-gradient(circle_at_85%_80%,rgba(247,53,63,0.08),transparent_28%)]"></div>
+
+      <div class="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
+        <div class="relative">
+          <div class="absolute -left-6 -top-6 h-28 w-52 -rotate-12 rounded-full border-[16px] border-laranja/20"></div>
+          <div class="relative overflow-hidden rounded-[2.5rem] bg-white p-3 shadow-2xl shadow-bordo/10 dark:bg-white/10">
+            <img src="assets/images/flavia-lancha.png" alt="Flávia Lancha, fundadora do ICOL" class="aspect-[4/5] w-full rounded-[2rem] object-cover" />
+          </div>
+        </div>
+
+        <div>
+          <span class="inline-flex rounded-full border border-laranja/20 bg-white px-5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-bordo shadow-sm dark:bg-white/10 dark:text-white">Nossa Fundadora</span>
+          <h2 class="mt-5 font-rounded text-4xl leading-tight text-bordo dark:text-white md:text-6xl">Quem tornou o ICOL realidade</h2>
+          <div class="mt-7 space-y-5 text-base leading-8 text-bordo/75 dark:text-white/70 md:text-lg">
+            <p>A idealizadora Flávia Lancha fundou o instituto após sua experiência como Secretária de Desenvolvimento de Franca, onde acompanhou de perto as dificuldades de quem buscava uma vaga de emprego.</p>
+            <p>O projeto é mantido com recursos próprios e com a colaboração de voluntários que ajudam a transformar capacitação em oportunidade real.</p>
+            <p>O nome ICOL também carrega afeto e memória: é uma linda homenagem à sua mãe, Isis Consoni Olivito Lancha.</p>
+          </div>
+          <blockquote class="mt-8 rounded-[2rem] border-l-4 border-laranja bg-white p-6 text-xl leading-8 text-bordo shadow-xl shadow-bordo/5 dark:bg-white/10 dark:text-white md:text-2xl">
+            <p class="font-rounded">"Acredito que é através da capacitação que podemos oferecer oportunidade de crescimento para todos."</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="cursos" class="js-reveal relative overflow-hidden px-4 py-20 opacity-0 translate-y-8 transition duration-700 ease-out md:px-8 md:py-28">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_12%_20%,rgba(238,26,36,0.08),transparent_28%),radial-gradient(circle_at_88%_70%,rgba(241,108,31,0.1),transparent_30%)]"></div>
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="inline-flex rounded-full border border-laranja/20 bg-white px-5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-bordo shadow-sm dark:bg-white/10 dark:text-white">Cursos e projetos</span>
+          <h2 class="mt-5 font-rounded text-4xl leading-tight text-bordo dark:text-white md:text-6xl">Os Nossos Projetos</h2>
+          <p class="mt-4 text-base leading-7 text-bordo/65 dark:text-white/65 md:text-lg">Descubra a oportunidade ideal para o seu crescimento</p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <article class="group flex min-h-[360px] flex-col rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-bordo/10 dark:bg-white/5">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-vermelho/10 text-vermelho">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.5 20 9l-8 4.5L4 9l8-4.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /><path d="M6.5 11.5v4.2c0 1.7 2.5 3.3 5.5 3.3s5.5-1.6 5.5-3.3v-4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+            </div>
+            <h3 class="mt-7 font-rounded text-2xl text-bordo dark:text-white">Projeto Aleph</h3>
+            <p class="mt-4 flex-1 text-base leading-7 text-bordo/70 dark:text-white/65">Foco em jovens e estudantes. Apoio escolar, tutoria e criação de rotinas de estudo inteligentes.</p>
+            <a href="#" class="mt-8 inline-flex w-fit items-center justify-center rounded-full border-2 border-vermelho px-6 py-3 text-sm font-bold text-vermelho transition hover:bg-vermelho hover:text-white">Saber mais</a>
+          </article>
+
+          <article class="group flex min-h-[360px] flex-col rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-bordo/10 dark:bg-white/5">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-laranja/10 text-laranja">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 6.5h14M5 12h14M5 17.5h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><path d="M16.5 15.5 19 18l-2.5 2.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </div>
+            <h3 class="mt-7 font-rounded text-2xl text-bordo dark:text-white">Cursos Livres</h3>
+            <p class="mt-4 flex-1 text-base leading-7 text-bordo/70 dark:text-white/65">Cursos rápidos (máximo de 4 meses) de capacitação profissional voltados para as exigências do mercado de trabalho.</p>
+            <a href="#" class="mt-8 inline-flex w-fit items-center justify-center rounded-full border-2 border-laranja px-6 py-3 text-sm font-bold text-laranja transition hover:bg-laranja hover:text-white">Saber mais</a>
+          </article>
+
+          <article class="group flex min-h-[360px] flex-col rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-bordo/10 dark:bg-white/5">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-rosa/10 text-rosa">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 20s-7-4.4-7-10.1A3.9 3.9 0 0 1 12 7.5a3.9 3.9 0 0 1 7 2.4C19 15.6 12 20 12 20Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+            </div>
+            <h3 class="mt-7 font-rounded text-2xl text-bordo dark:text-white">Projeto Bem-Viver</h3>
+            <p class="mt-4 flex-1 text-base leading-7 text-bordo/70 dark:text-white/65">Atividades e acolhimento especialmente desenvolvidos para promover o bem-estar do público 50+.</p>
+            <a href="#" class="mt-8 inline-flex w-fit items-center justify-center rounded-full border-2 border-rosa px-6 py-3 text-sm font-bold text-rosa transition hover:bg-rosa hover:text-white">Saber mais</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="js-reveal px-4 py-20 opacity-0 translate-y-8 transition duration-700 ease-out md:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-3xl text-center">
+          <span class="inline-flex rounded-full bg-laranja/10 px-5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-laranja">Prova social</span>
+          <h2 class="mt-5 font-rounded text-4xl text-bordo dark:text-white md:text-6xl">Histórias que seguem adiante</h2>
+          <p class="mt-4 text-bordo/65 dark:text-white/65">Depoimentos de quem encontrou no ICOL um novo caminho.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 dark:bg-white/5">
+            <p class="text-lg leading-8 text-bordo/75 dark:text-white/70">"O curso me deu segurança para voltar ao mercado e organizar meus estudos."</p>
+            <p class="mt-6 font-rounded text-bordo dark:text-white">Mariana S.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 dark:bg-white/5">
+            <p class="text-lg leading-8 text-bordo/75 dark:text-white/70">"Encontrei acolhimento, orientação e professores que realmente se importam."</p>
+            <p class="mt-6 font-rounded text-bordo dark:text-white">Carlos A.</p>
+          </article>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 dark:bg-white/5">
+            <p class="text-lg leading-8 text-bordo/75 dark:text-white/70">"A ICOL abriu portas para minha família enxergar novas possibilidades."</p>
+            <p class="mt-6 font-rounded text-bordo dark:text-white">Helena M.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section id="area-do-aluno" class="js-reveal px-4 py-20 opacity-0 translate-y-8 transition duration-700 ease-out md:px-8">
+      <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-8 rounded-[2rem] bg-bordo p-8 text-center text-white shadow-2xl shadow-bordo/20 md:flex-row md:p-10 md:text-left">
+        <div>
+          <span class="text-sm font-bold uppercase tracking-[0.18em] text-laranja">Portal ICOL</span>
+          <h2 class="mt-3 font-rounded text-3xl md:text-5xl">Acesse sua área em uma tela dedicada</h2>
+          <p class="mt-4 max-w-2xl text-white/70">Notas, frequência, calendário e suporte da plataforma ficam organizados no painel do aluno.</p>
+        </div>
+        <a href="login.html" class="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-7 py-4 text-sm font-bold uppercase tracking-[0.12em] text-bordo shadow-xl shadow-black/10 transition hover:-translate-y-0.5 hover:bg-laranja hover:text-white">
+          Entrar no portal
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/5516991343638" class="fixed bottom-5 right-5 z-50 inline-flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-2xl font-bold text-white shadow-2xl shadow-black/20 transition hover:-translate-y-1" aria-label="Falar com a ICOL pelo WhatsApp">
+    W
+  </a>
+
+  <footer id="contato" class="bg-[#120002] px-4 pt-16 text-white md:px-8 md:pt-20">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-10 pb-12 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <img src="assets/images/icol-colorida.png" alt="Logo ICOL" class="h-12 w-auto" />
+          <p class="mt-5 font-rounded text-2xl text-white">Transformando Vidas</p>
+          <p class="mt-4 max-w-xs text-sm leading-6 text-white/60">Capacitação, acolhimento e orientação para criar novos caminhos por meio da educação.</p>
+        </div>
+
+        <div>
+          <h3 class="font-rounded text-lg text-white">Links Rápidos</h3>
+          <ul class="mt-5 space-y-3 text-sm text-white/65">
+            <li><a href="#inicio" class="transition hover:text-laranja">Início</a></li>
+            <li><a href="#cursos" class="transition hover:text-laranja">Cursos</a></li>
+            <li><a href="#sobre" class="transition hover:text-laranja">Quem somos</a></li>
+            <li><a href="login.html" class="transition hover:text-laranja">Área do Aluno</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-rounded text-lg text-white">Contato</h3>
+          <ul class="mt-5 space-y-3 text-sm text-white/65">
+            <li>WhatsApp: +55 16 99134-3638</li>
+            <li>Instagram: @institutoicol</li>
+            <li>Facebook: @institutoicol</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-rounded text-lg text-white">Localização</h3>
+          <p class="mt-5 max-w-xs text-sm leading-7 text-white/65">Rua General Carneiro, 2092 - Centro<br />Franca / SP</p>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 py-6 text-center text-sm text-white/45">© 2024 ICOL. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const body = document.body;
+    const header = document.querySelector("#site-header");
+    const headerShell = document.querySelector("#header-shell");
+    const headerLogo = document.querySelector("#header-logo");
+    const revealItems = document.querySelectorAll(".js-reveal");
+    let fontScale = 1;
+
+    document.querySelectorAll("[data-font]").forEach((button) => {
+      button.addEventListener("click", () => {
+        fontScale += button.dataset.font === "increase" ? 0.05 : -0.05;
+        fontScale = Math.min(Math.max(fontScale, 0.9), 1.2);
+        body.style.fontSize = `${fontScale}rem`;
+      });
+    });
+
+    const updateHeader = () => {
+      const progress = Math.min(window.scrollY / 420, 1);
+      const compact = progress > 0.08;
+      const isDark = root.classList.contains("dark");
+      root.style.setProperty("--scroll-warm", (0.16 - progress * 0.07).toFixed(3));
+      root.style.setProperty("--scroll-rose", (0.10 + progress * 0.06).toFixed(3));
+      header.classList.toggle("py-2", compact);
+      header.classList.toggle("py-4", !compact);
+      headerShell.classList.toggle("py-2", compact);
+      headerShell.classList.toggle("md:px-4", compact);
+      headerShell.classList.toggle("bg-white/95", compact && !isDark);
+      headerShell.classList.toggle("dark:bg-[#1b0507]/95", compact && isDark);
+      headerShell.classList.toggle("shadow-bordo/10", compact);
+      headerLogo.classList.toggle("h-8", compact);
+      headerLogo.classList.toggle("h-10", !compact);
+    };
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    window.addEventListener("icol-theme-change", updateHeader);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove("opacity-0", "translate-y-8");
+          entry.target.classList.add("opacity-100", "translate-y-0");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    revealItems.forEach((item) => observer.observe(item));
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
