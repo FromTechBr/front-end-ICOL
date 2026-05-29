@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -20,56 +20,82 @@
 </head>
 <body class="bg-[#f7f7f8] text-[#2a0507] antialiased transition-colors duration-300 dark:bg-[#120002] dark:text-white">
   <div class="min-h-screen md:flex">
-    <aside class="bg-bordo px-5 py-6 text-white md:fixed md:inset-y-0 md:left-0 md:w-72">
+    <aside class="bg-bordo px-5 py-6 text-white dark:bg-[#0a0002] dark:border-r dark:border-white/10 md:fixed md:inset-y-0 md:left-0 md:w-72">
       <div class="flex h-full flex-col">
         <a href="../tela_inicial.html" class="flex items-center gap-3">
           <img src="../../icol/icol-imagens/icol-colorida.png" alt="Logo ICOL" class="h-11 w-auto rounded-full bg-white/95 px-2 py-1" />
         </a>
+        
+        <button type="button" data-theme-toggle class="mt-8 inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white hover:text-bordo dark:hover:bg-white/10 dark:hover:text-white" aria-pressed="false">
+          <span data-theme-icon aria-hidden="true">☾</span>
+          Tema
+        </button>
+
         <nav class="mt-10 flex flex-1 flex-col gap-2 text-sm font-semibold text-white/75" aria-label="Menu do aluno">
           <a href="dashboard_aluno.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Início</a>
           <a href="dashboard_aluno_notas.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Minhas Notas</a>
           <a href="dashboard_aluno_frequencia.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Frequência</a>
           <a href="dashboard_aluno_calendario.html" class="rounded-full bg-white/15 px-5 py-3 text-white">Calendário</a>
         </nav>
-        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo">Sair</a>
+        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo dark:hover:bg-white/10 dark:hover:text-white">Sair</a>
       </div>
     </aside>
 
     <main class="flex-1 px-4 py-8 md:ml-72 md:px-10 md:py-12">
       <div class="mx-auto max-w-6xl">
-        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5">
+        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-laranja">Rotina e atividades</span>
-          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo md:text-5xl">Calendário</h1>
-          <p class="mt-4 max-w-3xl text-sm leading-6 text-bordo/60 md:text-base">Veja aulas, entregas e eventos da sua turma.</p>
+          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo dark:text-white md:text-5xl">Calendário</h1>
+          <p class="mt-4 max-w-3xl text-sm leading-6 text-bordo/60 dark:text-white/70 md:text-base">Veja aulas, entregas e eventos da sua turma.</p>
         </header>
 
         <section class="mt-8 grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <h2 class="font-rounded text-2xl text-bordo">Maio de 2026</h2>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <h2 class="font-rounded text-2xl text-bordo dark:text-white">Maio de 2026</h2>
             <div class="mt-6 grid grid-cols-7 gap-2 text-center text-sm">
-              <span class="font-bold text-bordo/50">D</span><span class="font-bold text-bordo/50">S</span><span class="font-bold text-bordo/50">T</span><span class="font-bold text-bordo/50">Q</span><span class="font-bold text-bordo/50">Q</span><span class="font-bold text-bordo/50">S</span><span class="font-bold text-bordo/50">S</span>
-              <span class="rounded-2xl p-3 text-bordo/30">24</span><span class="rounded-2xl p-3 text-bordo/30">25</span><span class="rounded-2xl p-3 text-bordo/30">26</span><span class="rounded-2xl p-3 text-bordo/30">27</span><span class="rounded-2xl bg-laranja p-3 font-bold text-white">28</span><span class="rounded-2xl p-3">29</span><span class="rounded-2xl p-3">30</span>
-              <span class="rounded-2xl p-3">31</span><span class="rounded-2xl bg-[#fff8f5] p-3">1</span><span class="rounded-2xl p-3">2</span><span class="rounded-2xl bg-[#fff8f5] p-3">3</span><span class="rounded-2xl p-3">4</span><span class="rounded-2xl bg-[#fff8f5] p-3">5</span><span class="rounded-2xl p-3">6</span>
+              <span class="font-bold text-bordo/50 dark:text-white/70">D</span>
+              <span class="font-bold text-bordo/50 dark:text-white/70">S</span>
+              <span class="font-bold text-bordo/50 dark:text-white/70">T</span>
+              <span class="font-bold text-bordo/50 dark:text-white/70">Q</span>
+              <span class="font-bold text-bordo/50 dark:text-white/70">Q</span>
+              <span class="font-bold text-bordo/50 dark:text-white/70">S</span>
+              <span class="font-bold text-bordo/50 dark:text-white/70">S</span>
+              
+              <span class="rounded-2xl p-3 text-bordo/30 dark:text-white/30">24</span>
+              <span class="rounded-2xl p-3 text-bordo/30 dark:text-white/30">25</span>
+              <span class="rounded-2xl p-3 text-bordo/30 dark:text-white/30">26</span>
+              <span class="rounded-2xl p-3 text-bordo/30 dark:text-white/30">27</span>
+              <span class="rounded-2xl bg-laranja p-3 font-bold text-white shadow-lg shadow-laranja/20">28</span>
+              <span class="rounded-2xl p-3 dark:text-white">29</span>
+              <span class="rounded-2xl p-3 dark:text-white">30</span>
+              
+              <span class="rounded-2xl p-3 dark:text-white">31</span>
+              <span class="rounded-2xl bg-[#fff8f5] p-3 border border-transparent dark:border-white/10 dark:bg-white/5 dark:text-white">1</span>
+              <span class="rounded-2xl p-3 dark:text-white">2</span>
+              <span class="rounded-2xl bg-[#fff8f5] p-3 border border-transparent dark:border-white/10 dark:bg-white/5 dark:text-white">3</span>
+              <span class="rounded-2xl p-3 dark:text-white">4</span>
+              <span class="rounded-2xl bg-[#fff8f5] p-3 border border-transparent dark:border-white/10 dark:bg-white/5 dark:text-white">5</span>
+              <span class="rounded-2xl p-3 dark:text-white">6</span>
             </div>
           </article>
 
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <h2 class="font-rounded text-2xl text-bordo">Próximos compromissos</h2>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <h2 class="font-rounded text-2xl text-bordo dark:text-white">Próximos compromissos</h2>
             <div class="mt-6 space-y-4">
-              <div class="rounded-2xl border border-laranja/20 bg-[#fff8f5] p-5">
+              <div class="rounded-2xl border border-laranja/20 bg-[#fff8f5] p-5 dark:border-white/10 dark:bg-white/5">
                 <p class="text-sm font-bold uppercase tracking-[0.14em] text-laranja">Hoje - 19h</p>
-                <h3 class="mt-2 font-rounded text-xl text-bordo">Aula de Informática Básica</h3>
-                <p class="mt-2 text-sm leading-6 text-bordo/60">Laboratório 2 - prática de organização de arquivos.</p>
+                <h3 class="mt-2 font-rounded text-xl text-bordo dark:text-white">Aula de Informática Básica</h3>
+                <p class="mt-2 text-sm leading-6 text-bordo/60 dark:text-white/70">Laboratório 2 - prática de organização de arquivos.</p>
               </div>
-              <div class="rounded-2xl bg-[#fff8f5] p-5">
+              <div class="rounded-2xl bg-[#fff8f5] p-5 border border-transparent dark:border-white/10 dark:bg-white/5">
                 <p class="text-sm font-bold uppercase tracking-[0.14em] text-vermelho">Sexta - 18h</p>
-                <h3 class="mt-2 font-rounded text-xl text-bordo">Entrega de atividade</h3>
-                <p class="mt-2 text-sm leading-6 text-bordo/60">Exercício de planilhas básicas.</p>
+                <h3 class="mt-2 font-rounded text-xl text-bordo dark:text-white">Entrega de atividade</h3>
+                <p class="mt-2 text-sm leading-6 text-bordo/60 dark:text-white/70">Exercício de planilhas básicas.</p>
               </div>
-              <div class="rounded-2xl bg-[#fff8f5] p-5">
-                <p class="text-sm font-bold uppercase tracking-[0.14em] text-bordo/50">Sábado - 9h</p>
-                <h3 class="mt-2 font-rounded text-xl text-bordo">Plantão de dúvidas</h3>
-                <p class="mt-2 text-sm leading-6 text-bordo/60">Atendimento para alunos que precisam revisar conteúdos.</p>
+              <div class="rounded-2xl bg-[#fff8f5] p-5 border border-transparent dark:border-white/10 dark:bg-white/5">
+                <p class="text-sm font-bold uppercase tracking-[0.14em] text-bordo/50 dark:text-white/50">Sábado - 9h</p>
+                <h3 class="mt-2 font-rounded text-xl text-bordo dark:text-white">Plantão de dúvidas</h3>
+                <p class="mt-2 text-sm leading-6 text-bordo/60 dark:text-white/70">Atendimento para alunos que precisam revisar conteúdos.</p>
               </div>
             </div>
           </article>
@@ -78,10 +104,10 @@
     </main>
   </div>
 
-  <button id="ai-toggle" type="button" class="fixed bottom-5 right-5 z-50 inline-flex h-16 w-16 items-center justify-center rounded-full bg-bordo text-sm font-black text-white shadow-2xl shadow-bordo/30 transition hover:-translate-y-1 hover:bg-laranja" aria-label="Abrir assistente de IA">IA</button>
-  <section id="ai-panel" class="fixed bottom-24 right-5 z-50 hidden w-[min(22rem,calc(100vw-2.5rem))] rounded-3xl bg-white p-5 shadow-2xl shadow-bordo/20">
-    <h2 class="font-rounded text-xl text-bordo">Assistente ICOL</h2>
-    <p class="mt-2 text-sm leading-6 text-bordo/60">Peça para organizar sua rotina de estudos com base nos horários do calendário.</p>
+  <button id="ai-toggle" type="button" class="fixed bottom-5 right-5 z-50 inline-flex h-16 w-16 items-center justify-center rounded-full bg-bordo text-sm font-black text-white shadow-2xl shadow-bordo/30 transition hover:-translate-y-1 hover:bg-laranja dark:border dark:border-white/20" aria-label="Abrir assistente de IA">IA</button>
+  <section id="ai-panel" class="fixed bottom-24 right-5 z-50 hidden w-[min(22rem,calc(100vw-2.5rem))] rounded-3xl bg-white p-5 shadow-2xl shadow-bordo/20 border border-transparent dark:border-white/10 dark:bg-[#1a0507]">
+    <h2 class="font-rounded text-xl text-bordo dark:text-white">Assistente ICOL</h2>
+    <p class="mt-2 text-sm leading-6 text-bordo/60 dark:text-white/70">Peça para organizar sua rotina de estudos com base nos horários do calendário.</p>
   </section>
   <script>
     const aiToggle = document.querySelector("#ai-toggle");
@@ -90,6 +116,3 @@
   </script>
 </body>
 </html>
-
-
-

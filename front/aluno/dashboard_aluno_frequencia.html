@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -20,59 +20,65 @@
 </head>
 <body class="bg-[#f7f7f8] text-[#2a0507] antialiased transition-colors duration-300 dark:bg-[#120002] dark:text-white">
   <div class="min-h-screen md:flex">
-    <aside class="bg-bordo px-5 py-6 text-white md:fixed md:inset-y-0 md:left-0 md:w-72">
+    <aside class="bg-bordo px-5 py-6 text-white dark:bg-[#0a0002] dark:border-r dark:border-white/10 md:fixed md:inset-y-0 md:left-0 md:w-72">
       <div class="flex h-full flex-col">
         <a href="../tela_inicial.html" class="flex items-center gap-3">
           <img src="../../icol/icol-imagens/icol-colorida.png" alt="Logo ICOL" class="h-11 w-auto rounded-full bg-white/95 px-2 py-1" />
         </a>
+        
+        <button type="button" data-theme-toggle class="mt-8 inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white hover:text-bordo dark:hover:bg-white/10 dark:hover:text-white" aria-pressed="false">
+          <span data-theme-icon aria-hidden="true">☾</span>
+          Tema
+        </button>
+
         <nav class="mt-10 flex flex-1 flex-col gap-2 text-sm font-semibold text-white/75" aria-label="Menu do aluno">
           <a href="dashboard_aluno.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Início</a>
           <a href="dashboard_aluno_notas.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Minhas Notas</a>
           <a href="dashboard_aluno_frequencia.html" class="rounded-full bg-white/15 px-5 py-3 text-white">Frequência</a>
           <a href="dashboard_aluno_calendario.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Calendário</a>
         </nav>
-        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo">Sair</a>
+        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo dark:hover:bg-white/10 dark:hover:text-white">Sair</a>
       </div>
     </aside>
 
     <main class="flex-1 px-4 py-8 md:ml-72 md:px-10 md:py-12">
       <div class="mx-auto max-w-6xl">
-        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5">
+        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-laranja">Controle de presença</span>
-          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo md:text-5xl">Frequência</h1>
-          <p class="mt-4 max-w-3xl text-sm leading-6 text-bordo/60 md:text-base">Visualize presenças, faltas e justificativas de forma clara.</p>
+          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo dark:text-white md:text-5xl">Frequência</h1>
+          <p class="mt-4 max-w-3xl text-sm leading-6 text-bordo/60 dark:text-white/70 md:text-base">Visualize presenças, faltas e justificativas de forma clara.</p>
         </header>
 
         <section class="mt-8 grid gap-5 md:grid-cols-3">
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <p class="text-sm font-bold text-bordo/55">Presença Geral</p>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <p class="text-sm font-bold text-bordo/55 dark:text-white/70">Presença Geral</p>
             <p class="mt-4 font-rounded text-5xl text-laranja">92%</p>
           </article>
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <p class="text-sm font-bold text-bordo/55">Aulas Presentes</p>
-            <p class="mt-4 font-rounded text-5xl text-bordo">23</p>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <p class="text-sm font-bold text-bordo/55 dark:text-white/70">Aulas Presentes</p>
+            <p class="mt-4 font-rounded text-5xl text-bordo dark:text-white">23</p>
           </article>
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <p class="text-sm font-bold text-bordo/55">Faltas</p>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <p class="text-sm font-bold text-bordo/55 dark:text-white/70">Faltas</p>
             <p class="mt-4 font-rounded text-5xl text-vermelho">2</p>
           </article>
         </section>
 
         <section class="mt-8 grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <h2 class="font-rounded text-2xl text-bordo">Progresso do mês</h2>
-            <div class="mt-6 h-4 overflow-hidden rounded-full bg-[#ffe2d7]">
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <h2 class="font-rounded text-2xl text-bordo dark:text-white">Progresso do mês</h2>
+            <div class="mt-6 h-4 overflow-hidden rounded-full bg-[#ffe2d7] dark:bg-white/10">
               <div class="h-full w-[92%] rounded-full bg-laranja"></div>
             </div>
-            <p class="mt-4 text-sm leading-6 text-bordo/60">A meta mínima de presença está sendo cumprida.</p>
+            <p class="mt-4 text-sm leading-6 text-bordo/60 dark:text-white/70">A meta mínima de presença está sendo cumprida.</p>
           </article>
 
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <h2 class="font-rounded text-2xl text-bordo">Histórico recente</h2>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <h2 class="font-rounded text-2xl text-bordo dark:text-white">Histórico recente</h2>
             <div class="mt-6 space-y-3 text-sm">
-              <div class="flex items-center justify-between rounded-2xl bg-[#fff8f5] p-4"><span>Segunda, 19h</span><strong class="text-laranja">Presente</strong></div>
-              <div class="flex items-center justify-between rounded-2xl bg-[#fff8f5] p-4"><span>Quarta, 19h</span><strong class="text-laranja">Presente</strong></div>
-              <div class="flex items-center justify-between rounded-2xl bg-[#fff8f5] p-4"><span>Sexta, 19h</span><strong class="text-vermelho">Falta justificada</strong></div>
+              <div class="flex items-center justify-between rounded-2xl bg-[#fff8f5] p-4 border border-transparent dark:border-white/10 dark:bg-white/5"><span class="dark:text-white">Segunda, 19h</span><strong class="text-laranja">Presente</strong></div>
+              <div class="flex items-center justify-between rounded-2xl bg-[#fff8f5] p-4 border border-transparent dark:border-white/10 dark:bg-white/5"><span class="dark:text-white">Quarta, 19h</span><strong class="text-laranja">Presente</strong></div>
+              <div class="flex items-center justify-between rounded-2xl bg-[#fff8f5] p-4 border border-transparent dark:border-white/10 dark:bg-white/5"><span class="dark:text-white">Sexta, 19h</span><strong class="text-vermelho">Falta justificada</strong></div>
             </div>
           </article>
         </section>
@@ -80,10 +86,10 @@
     </main>
   </div>
 
-  <button id="ai-toggle" type="button" class="fixed bottom-5 right-5 z-50 inline-flex h-16 w-16 items-center justify-center rounded-full bg-bordo text-sm font-black text-white shadow-2xl shadow-bordo/30 transition hover:-translate-y-1 hover:bg-laranja" aria-label="Abrir assistente de IA">IA</button>
-  <section id="ai-panel" class="fixed bottom-24 right-5 z-50 hidden w-[min(22rem,calc(100vw-2.5rem))] rounded-3xl bg-white p-5 shadow-2xl shadow-bordo/20">
-    <h2 class="font-rounded text-xl text-bordo">Assistente ICOL</h2>
-    <p class="mt-2 text-sm leading-6 text-bordo/60">Pergunte sobre faltas, justificativas ou frequência mínima.</p>
+  <button id="ai-toggle" type="button" class="fixed bottom-5 right-5 z-50 inline-flex h-16 w-16 items-center justify-center rounded-full bg-bordo text-sm font-black text-white shadow-2xl shadow-bordo/30 transition hover:-translate-y-1 hover:bg-laranja dark:border dark:border-white/20" aria-label="Abrir assistente de IA">IA</button>
+  <section id="ai-panel" class="fixed bottom-24 right-5 z-50 hidden w-[min(22rem,calc(100vw-2.5rem))] rounded-3xl bg-white p-5 shadow-2xl shadow-bordo/20 border border-transparent dark:border-white/10 dark:bg-[#1a0507]">
+    <h2 class="font-rounded text-xl text-bordo dark:text-white">Assistente ICOL</h2>
+    <p class="mt-2 text-sm leading-6 text-bordo/60 dark:text-white/70">Pergunte sobre faltas, justificativas ou frequência mínima.</p>
   </section>
   <script>
     const aiToggle = document.querySelector("#ai-toggle");
@@ -92,6 +98,3 @@
   </script>
 </body>
 </html>
-
-
-

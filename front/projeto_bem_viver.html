@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projeto Bem-Viver - ICOL</title>
+  <script src="assets/js/theme.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            bordo: "#8B0006",
+            laranja: "#F16C1F",
+            vermelho: "#EE1A24",
+            rosa: "#F7353F",
+          },
+          fontFamily: {
+            rounded: ['"Arial Rounded MT Bold"', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-[#fff8f5] text-[#2a0507] antialiased transition-colors duration-300 dark:bg-[#120002] dark:text-white">
+  <header id="site-header" class="fixed inset-x-0 top-0 z-50 px-4 py-4 transition-all duration-700 ease-out md:px-8">
+    <div id="header-shell" class="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/60 bg-white/80 px-4 py-3 shadow-lg shadow-bordo/5 backdrop-blur-xl transition-all duration-700 ease-out dark:border-white/10 dark:bg-[#1b0507]/80 md:px-5">
+      <a href="tela_inicial.html" class="flex items-center gap-3" aria-label="Ir para o início">
+        <img src="../icol/icol-imagens/icol-colorida.png" alt="Logo ICOL" class="h-10 w-auto transition-all duration-300" id="header-logo" />
+      </a>
+
+      <nav class="hidden items-center gap-7 text-sm font-semibold text-bordo/80 dark:text-white/75 lg:flex" aria-label="Navegação principal">
+        <a href="tela_inicial.html#inicio" class="transition hover:text-laranja">Início</a>
+        <a href="tela_inicial.html#sobre" class="transition hover:text-laranja">Quem somos</a>
+        <a href="tela_inicial.html#fundadora" class="transition hover:text-laranja">Fundadora</a>
+        <a href="tela_inicial.html#cursos" class="transition hover:text-laranja">Cursos</a>
+        <a href="tela_inicial.html#mural-avisos" class="transition hover:text-laranja">Mural</a>
+        <a href="tela_inicial.html#depoimentos" class="transition hover:text-laranja">Depoimentos</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <div class="hidden rounded-full bg-[#fff8f5] p-1 dark:bg-white/10 sm:flex" aria-label="Controles de acessibilidade">
+          <button type="button" data-font="decrease" class="rounded-full px-3 py-2 text-xs font-bold text-bordo transition hover:bg-white dark:text-white dark:hover:bg-white/10" aria-label="Diminuir fonte">A-</button>
+          <button type="button" data-font="increase" class="rounded-full px-3 py-2 text-xs font-bold text-bordo transition hover:bg-white dark:text-white dark:hover:bg-white/10" aria-label="Aumentar fonte">A+</button>
+        </div>
+
+        <button type="button" id="theme-toggle" data-theme-toggle class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-bordo/10 bg-white text-bordo shadow-sm transition hover:border-laranja hover:text-laranja dark:border-white/10 dark:bg-white/10 dark:text-white" aria-label="Alternar modo escuro" aria-pressed="false">
+          <span aria-hidden="true" data-theme-icon>☾</span>
+        </button>
+
+        <a href="login.html" class="hidden rounded-full bg-bordo px-5 py-3 text-sm font-bold text-white shadow-lg shadow-bordo/20 transition hover:bg-[#6f0005] md:inline-flex">
+          Entrar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-32 md:pt-40 pb-20">
+    <!-- Hero Section -->
+    <section class="px-4 md:px-8">
+      <div class="mx-auto max-w-7xl text-center">
+        <span class="inline-flex rounded-full border border-rosa/20 bg-white px-5 py-2 text-sm font-bold uppercase tracking-[0.18em] text-rosa shadow-sm border border-transparent dark:border-white/10 dark:bg-white/5 dark:text-white">Público 50+</span>
+        <h1 class="mt-5 font-rounded text-5xl text-bordo dark:text-white md:text-7xl">Projeto Bem-Viver</h1>
+        <p class="mx-auto mt-6 max-w-2xl text-xl leading-9 text-bordo/75 dark:text-white/70">
+          Oferecemos atividades, acolhimento e ensino pensados especialmente para o bem-estar e inclusão do público 50+. Um espaço seguro para aprender, fazer novos amigos e exercitar a mente de forma prazerosa.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cursos Section -->
+    <section class="px-4 mt-20 md:px-8">
+      <div class="mx-auto max-w-7xl">
+        <h2 class="font-rounded text-4xl text-center text-bordo dark:text-white md:text-5xl">Atividades e Oficinas</h2>
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          
+          <article class="flex flex-col rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-rosa/10 text-rosa">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="mt-7 font-rounded text-3xl text-bordo dark:text-white">Inclusão Digital 50+</h3>
+            <p class="mt-4 flex-1 text-lg leading-8 text-bordo/70 dark:text-white/70">Aprenda a usar o celular, redes sociais, aplicativos de banco e de mensagens com total segurança e paciência.</p>
+            <div class="mt-8 w-full">
+              <p class="mb-3 text-sm font-bold text-rosa dark:text-rosa/90">🟢 25 vagas disponíveis</p>
+              <div class="flex flex-col gap-3 sm:flex-row">
+                <a href="cadastro.html" class="inline-flex flex-1 items-center justify-center rounded-full bg-rosa px-4 py-3 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#e4212c] shadow-lg shadow-rosa/20 dark:shadow-none uppercase tracking-[0.08em] lg:text-sm">Inscrever-se</a>
+                <a href="#" class="inline-flex flex-1 items-center justify-center rounded-full border-2 border-rosa px-4 py-3 text-xs font-bold text-rosa transition hover:bg-rosa hover:text-white uppercase tracking-[0.08em] lg:text-sm">Saber mais</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex flex-col rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-rosa/10 text-rosa">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="mt-7 font-rounded text-3xl text-bordo dark:text-white">Oficina de Memória</h3>
+            <p class="mt-4 flex-1 text-lg leading-8 text-bordo/70 dark:text-white/70">Exercícios práticos e dinâmicas lúdicas para manter a mente sempre ativa, melhorando o foco e a cognição geral.</p>
+            <div class="mt-8 w-full">
+              <p class="mb-3 text-sm font-bold text-rosa dark:text-rosa/90">🟡 Últimas 4 vagas</p>
+              <div class="flex flex-col gap-3 sm:flex-row">
+                <a href="cadastro.html" class="inline-flex flex-1 items-center justify-center rounded-full bg-rosa px-4 py-3 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#e4212c] shadow-lg shadow-rosa/20 dark:shadow-none uppercase tracking-[0.08em] lg:text-sm">Inscrever-se</a>
+                <a href="#" class="inline-flex flex-1 items-center justify-center rounded-full border-2 border-rosa px-4 py-3 text-xs font-bold text-rosa transition hover:bg-rosa hover:text-white uppercase tracking-[0.08em] lg:text-sm">Saber mais</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="flex flex-col rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <div class="flex h-14 w-14 items-center justify-center rounded-full bg-rosa/10 text-rosa">
+              <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </div>
+            <h3 class="mt-7 font-rounded text-3xl text-bordo dark:text-white">Bem-Estar Integral</h3>
+            <p class="mt-4 flex-1 text-lg leading-8 text-bordo/70 dark:text-white/70">Rodas de conversa, atividades integrativas e troca de vivências focadas em proporcionar saúde emocional.</p>
+            <div class="mt-8 w-full">
+              <p class="mb-3 text-sm font-bold text-rosa dark:text-rosa/90">🟢 18 vagas disponíveis</p>
+              <div class="flex flex-col gap-3 sm:flex-row">
+                <a href="cadastro.html" class="inline-flex flex-1 items-center justify-center rounded-full bg-rosa px-4 py-3 text-xs font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#e4212c] shadow-lg shadow-rosa/20 dark:shadow-none uppercase tracking-[0.08em] lg:text-sm">Inscrever-se</a>
+                <a href="#" class="inline-flex flex-1 items-center justify-center rounded-full border-2 border-rosa px-4 py-3 text-xs font-bold text-rosa transition hover:bg-rosa hover:text-white uppercase tracking-[0.08em] lg:text-sm">Saber mais</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" class="bg-[#120002] px-4 pt-16 text-white md:px-8 md:pt-20">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-10 pb-12 md:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <img src="../icol/icol-imagens/icol-colorida.png" alt="Logo ICOL" class="h-12 w-auto" />
+          <p class="mt-5 font-rounded text-2xl text-white">Transformando Vidas</p>
+          <p class="mt-4 max-w-xs text-sm leading-6 text-white/60">Capacitação, acolhimento e orientação para criar novos caminhos por meio da educação.</p>
+        </div>
+
+        <div>
+          <h3 class="font-rounded text-lg text-white">Links Rápidos</h3>
+          <ul class="mt-5 space-y-3 text-sm text-white/65">
+            <li><a href="tela_inicial.html#inicio" class="transition hover:text-laranja">Início</a></li>
+            <li><a href="tela_inicial.html#cursos" class="transition hover:text-laranja">Cursos</a></li>
+            <li><a href="tela_inicial.html#sobre" class="transition hover:text-laranja">Quem somos</a></li>
+            <li><a href="login.html" class="transition hover:text-laranja">Área do Aluno</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-rounded text-lg text-white">Contato</h3>
+          <ul class="mt-5 space-y-3 text-sm text-white/65">
+            <li>WhatsApp: +55 16 99134-3638</li>
+            <li>Instagram: @institutoicol</li>
+            <li>Facebook: @institutoicol</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-rounded text-lg text-white">Localização</h3>
+          <p class="mt-5 max-w-xs text-sm leading-7 text-white/65">Rua General Carneiro, 2092 - Centro<br />Franca / SP</p>
+        </div>
+      </div>
+
+      <div class="border-t border-white/10 py-6 text-center text-sm text-white/45">© 2024 ICOL. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.querySelector("#site-header");
+    const headerShell = document.querySelector("#header-shell");
+    const headerLogo = document.querySelector("#header-logo");
+
+    const updateHeader = () => {
+      const progress = Math.min(window.scrollY / 100, 1);
+      const compact = progress > 0.08;
+      const isDark = document.documentElement.classList.contains("dark");
+      header.classList.toggle("py-2", compact);
+      header.classList.toggle("py-4", !compact);
+      headerShell.classList.toggle("py-2", compact);
+      headerShell.classList.toggle("md:px-4", compact);
+      headerShell.classList.toggle("bg-white/95", compact && !isDark);
+      headerShell.classList.toggle("dark:bg-[#1b0507]/95", compact && isDark);
+      headerShell.classList.toggle("shadow-bordo/10", compact);
+      headerLogo.classList.toggle("h-8", compact);
+      headerLogo.classList.toggle("h-10", !compact);
+    };
+
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    window.addEventListener("icol-theme-change", updateHeader);
+  </script>
+</body>
+</html>

@@ -1,9 +1,9 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DiÃ¡rio de Classe - ICOL</title>
+  <title>Diário de Classe - ICOL</title>
   <script src="../assets/js/theme.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -14,32 +14,54 @@
 </head>
 <body class="bg-gray-50 text-[#2a0507] antialiased transition-colors duration-300 dark:bg-[#120002] dark:text-white">
   <div class="min-h-screen md:flex">
-    <aside class="bg-bordo px-5 py-6 text-white md:fixed md:inset-y-0 md:left-0 md:w-72">
+    <aside class="bg-bordo px-5 py-6 text-white dark:bg-[#0a0002] dark:border-r dark:border-white/10 md:fixed md:inset-y-0 md:left-0 md:w-72">
       <div class="flex h-full flex-col">
         <a href="../tela_inicial.html"><img src="../../icol/icol-imagens/icol-colorida.png" alt="Logo ICOL" class="h-11 w-auto rounded-full bg-white/95 px-2 py-1" /></a>
+        
+        <button type="button" data-theme-toggle class="mt-8 inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white hover:text-bordo dark:hover:bg-white/10 dark:hover:text-white" aria-pressed="false">
+          <span data-theme-icon aria-hidden="true">☾</span>
+          Tema
+        </button>
+
         <nav class="mt-10 flex flex-1 flex-col gap-2 text-sm font-semibold text-white/75" aria-label="Menu do professor">
-          <a href="dashboard_professor.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">InÃ­cio</a>
+          <a href="dashboard_professor.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Início</a>
           <a href="dashboard_professor_turmas.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Minhas Turmas</a>
-          <a href="dashboard_professor_notas.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">LanÃ§ar Notas</a>
-          <a href="dashboard_professor_diario.html" class="rounded-full bg-white/15 px-5 py-3 text-white">DiÃ¡rio de Classe</a>
+          <a href="dashboard_professor_notas.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Lançar Notas</a>
+          <a href="dashboard_professor_diario.html" class="rounded-full bg-white/15 px-5 py-3 text-white">Diário de Classe</a>
         </nav>
-        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo">Sair</a>
+        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo dark:hover:bg-white/10 dark:hover:text-white">Sair</a>
       </div>
     </aside>
     <main class="flex-1 px-4 py-8 md:ml-72 md:px-10 md:py-12">
       <div class="mx-auto max-w-6xl">
-        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5">
+        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-laranja">Registro de aula</span>
-          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo md:text-5xl">DiÃ¡rio de Classe</h1>
+          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo dark:text-white md:text-5xl">Diário de Classe</h1>
         </header>
         <section class="mt-8 grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5"><h2 class="font-rounded text-2xl text-bordo">Aula de hoje</h2><p class="mt-4 text-bordo/60">InformÃ¡tica BÃ¡sica - Turma A</p><p class="mt-2 text-bordo/60">ConteÃºdo: organizaÃ§Ã£o de arquivos e pastas.</p><button class="mt-6 rounded-full bg-laranja px-6 py-3 text-sm font-bold text-white">Registrar aula</button></article>
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5"><h2 class="font-rounded text-2xl text-bordo">PresenÃ§a</h2><div class="mt-6 space-y-3 text-sm"><div class="flex justify-between rounded-2xl bg-[#fff8f5] p-4"><span>Mariana S.</span><strong class="text-laranja">Presente</strong></div><div class="flex justify-between rounded-2xl bg-[#fff8f5] p-4"><span>Carlos A.</span><strong class="text-laranja">Presente</strong></div><div class="flex justify-between rounded-2xl bg-[#fff8f5] p-4"><span>Helena M.</span><strong class="text-vermelho">Falta</strong></div></div></article>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <h2 class="font-rounded text-2xl text-bordo dark:text-white">Aula de hoje</h2>
+            <p class="mt-4 text-bordo/60 dark:text-white/70">Informática Básica - Turma A</p>
+            <p class="mt-2 text-bordo/60 dark:text-white/70">Conteúdo: organização de arquivos e pastas.</p>
+            <button class="mt-6 rounded-full bg-laranja px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-vermelho">Registrar aula</button>
+          </article>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <h2 class="font-rounded text-2xl text-bordo dark:text-white">Presença</h2>
+            <div class="mt-6 space-y-3 text-sm">
+              <div class="flex justify-between rounded-2xl bg-[#fff8f5] p-4 border border-transparent dark:border-white/10 dark:bg-white/5">
+                <span class="dark:text-white">Mariana S.</span><strong class="text-laranja">Presente</strong>
+              </div>
+              <div class="flex justify-between rounded-2xl bg-[#fff8f5] p-4 border border-transparent dark:border-white/10 dark:bg-white/5">
+                <span class="dark:text-white">Carlos A.</span><strong class="text-laranja">Presente</strong>
+              </div>
+              <div class="flex justify-between rounded-2xl bg-[#fff8f5] p-4 border border-transparent dark:border-white/10 dark:bg-white/5">
+                <span class="dark:text-white">Helena M.</span><strong class="text-vermelho">Falta</strong>
+              </div>
+            </div>
+          </article>
         </section>
       </div>
     </main>
   </div>
 </body>
 </html>
-
-

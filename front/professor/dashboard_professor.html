@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -28,11 +28,16 @@
 
 <body class="bg-gray-50 text-[#2a0507] antialiased transition-colors duration-300 dark:bg-[#120002] dark:text-white">
   <div class="min-h-screen md:flex">
-    <aside class="bg-bordo px-5 py-6 text-white md:fixed md:inset-y-0 md:left-0 md:w-72">
+    <aside class="bg-bordo px-5 py-6 text-white dark:bg-[#0a0002] dark:border-r dark:border-white/10 md:fixed md:inset-y-0 md:left-0 md:w-72">
       <div class="flex h-full flex-col">
         <a href="../tela_inicial.html" class="flex items-center gap-3">
           <img src="../../icol/icol-imagens/icol-colorida.png" alt="Logo ICOL" class="h-11 w-auto rounded-full bg-white/95 px-2 py-1" />
         </a>
+
+        <button type="button" data-theme-toggle class="mt-8 inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:bg-white hover:text-bordo dark:hover:bg-white/10 dark:hover:text-white" aria-pressed="false">
+          <span data-theme-icon aria-hidden="true">☾</span>
+          Tema
+        </button>
 
         <nav class="mt-10 flex flex-1 flex-col gap-2 text-sm font-semibold text-white/75" aria-label="Menu do professor">
           <a href="dashboard_professor.html" class="rounded-full bg-white/15 px-5 py-3 text-white">Início</a>
@@ -41,7 +46,7 @@
           <a href="dashboard_professor_diario.html" class="rounded-full px-5 py-3 transition hover:bg-white/10 hover:text-white">Diário de Classe</a>
         </nav>
 
-        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo">
+        <a href="../tela_inicial.html" class="mt-8 rounded-full border border-white/20 px-5 py-3 text-center text-sm font-bold text-white transition hover:bg-white hover:text-bordo dark:hover:bg-white/10 dark:hover:text-white">
           Sair
         </a>
       </div>
@@ -49,51 +54,51 @@
 
     <main class="flex-1 px-4 py-8 md:ml-72 md:px-10 md:py-12">
       <div class="mx-auto max-w-6xl">
-        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5">
+        <header class="rounded-3xl bg-white p-8 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
           <span class="text-sm font-bold uppercase tracking-[0.18em] text-laranja">Área do Professor</span>
-          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo md:text-5xl">
+          <h1 class="mt-3 font-rounded text-4xl leading-tight text-bordo dark:text-white md:text-5xl">
             Olá, Professor! Resumo do dia.
           </h1>
         </header>
 
         <section class="mt-8 grid gap-5 md:grid-cols-3">
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <p class="text-sm font-bold text-bordo/55">Turmas Ativas</p>
-            <p class="mt-4 font-rounded text-5xl text-bordo">4</p>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <p class="text-sm font-bold text-bordo/55 dark:text-white/70">Turmas Ativas</p>
+            <p class="mt-4 font-rounded text-5xl text-bordo dark:text-white">4</p>
           </article>
 
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <p class="text-sm font-bold text-bordo/55">Notas Pendentes</p>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <p class="text-sm font-bold text-bordo/55 dark:text-white/70">Notas Pendentes</p>
             <p class="mt-4 font-rounded text-5xl text-laranja">1</p>
           </article>
 
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <p class="text-sm font-bold text-bordo/55">Mensagens da Coordenação</p>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <p class="text-sm font-bold text-bordo/55 dark:text-white/70">Mensagens da Coordenação</p>
             <p class="mt-4 font-rounded text-5xl text-rosa">3</p>
           </article>
         </section>
 
         <section class="mt-8 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
-          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5">
-            <h2 class="font-rounded text-2xl text-bordo">Aulas de hoje</h2>
+          <article class="rounded-3xl bg-white p-7 shadow-xl shadow-bordo/5 border border-transparent dark:border-white/10 dark:bg-white/5">
+            <h2 class="font-rounded text-2xl text-bordo dark:text-white">Aulas de hoje</h2>
             <div class="mt-6 space-y-3 text-sm">
-              <div class="rounded-2xl bg-[#fff8f5] p-4">
-                <p class="font-bold text-bordo">Informática Básica - Turma A</p>
-                <p class="mt-1 text-bordo/60">19h às 21h - Laboratório 2</p>
+              <div class="rounded-2xl bg-[#fff8f5] p-4 border border-transparent dark:border-white/10 dark:bg-white/5">
+                <p class="font-bold text-bordo dark:text-white">Informática Básica - Turma A</p>
+                <p class="mt-1 text-bordo/60 dark:text-white/70">19h às 21h - Laboratório 2</p>
               </div>
-              <div class="rounded-2xl bg-[#fff8f5] p-4">
-                <p class="font-bold text-bordo">Planilhas - Turma B</p>
-                <p class="mt-1 text-bordo/60">21h às 22h - Laboratório 1</p>
+              <div class="rounded-2xl bg-[#fff8f5] p-4 border border-transparent dark:border-white/10 dark:bg-white/5">
+                <p class="font-bold text-bordo dark:text-white">Planilhas - Turma B</p>
+                <p class="mt-1 text-bordo/60 dark:text-white/70">21h às 22h - Laboratório 1</p>
               </div>
             </div>
           </article>
 
-          <article class="rounded-3xl bg-bordo p-7 text-white shadow-xl shadow-bordo/10">
+          <article class="rounded-3xl bg-bordo p-7 text-white shadow-xl shadow-bordo/10 border border-transparent dark:border-white/10 dark:bg-[#1a0003]">
             <h2 class="font-rounded text-2xl">Atalhos</h2>
             <div class="mt-6 grid gap-3 text-sm font-bold">
-              <a href="dashboard_professor_turmas.html" class="rounded-2xl bg-white/10 p-4 transition hover:bg-white/20">Ver turmas</a>
-              <a href="dashboard_professor_notas.html" class="rounded-2xl bg-white/10 p-4 transition hover:bg-white/20">Lançar notas</a>
-              <a href="dashboard_professor_diario.html" class="rounded-2xl bg-white/10 p-4 transition hover:bg-white/20">Abrir diário</a>
+              <a href="dashboard_professor_turmas.html" class="rounded-2xl bg-white/10 p-4 transition hover:bg-white/20 border border-transparent dark:border-white/10">Ver turmas</a>
+              <a href="dashboard_professor_notas.html" class="rounded-2xl bg-white/10 p-4 transition hover:bg-white/20 border border-transparent dark:border-white/10">Lançar notas</a>
+              <a href="dashboard_professor_diario.html" class="rounded-2xl bg-white/10 p-4 transition hover:bg-white/20 border border-transparent dark:border-white/10">Abrir diário</a>
             </div>
           </article>
         </section>
@@ -102,6 +107,3 @@
   </div>
 </body>
 </html>
-
-
-
